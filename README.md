@@ -17,8 +17,9 @@ pip install opencv-python
 - 커맨드 창에서 확인
 
 ```cpp
+파이썬 접속
 python
-
+cv 확인
 import cv2
 ```
 ---
