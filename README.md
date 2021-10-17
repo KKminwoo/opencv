@@ -10,13 +10,13 @@
 
 ### OpenCV 설치
 
-```cpp
+```shell
 pip install opencv-python
 ```
 
 - 커맨드 창에서 확인
 
-```cpp
+```shell
 파이썬 접속
 python
 cv 확인
@@ -57,3 +57,8 @@ Python → 튜플, numpy.ndarray
 - 그레이스케일 영상 : 가로 x 세로(Byties)
 - 트루컬러 영상 : 가로 x 세로 x 3(Bytes) → RGB로 3차원
 ⇒ 연산량에 따른 시간을 줄이는 것이 중요하다!
+
+### OpenCV API 
+- 함수 도움말 사이트
+http://docs.opencv.org/master/
+
