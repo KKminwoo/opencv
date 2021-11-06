@@ -5,7 +5,7 @@ import cv2
 # 새 영상 생성하기
 img1 = np.empty((240, 320), dtype=np.uint8)       # grayscale image
 img2 = np.zeros((240, 320, 3), dtype=np.uint8)    # color image
-img3 = np.ones((240, 320), dtype=np.uint8) * 255  # dark gray
+img3 = np.ones((240, 320), dtype=np.uint8) * 255  # dark gray -> 1에다가 255를 곱해서 원하는 색상의 영상을 만드느 것이 가능
 img4 = np.full((240, 320, 3), (0, 255, 255), dtype=np.uint8)  # yellow
 
 cv2.imshow('img1', img1)
@@ -16,10 +16,10 @@ cv2.waitKey()
 cv2.destroyAllWindows()
 
 # 영상 복사
-img1 = cv2.imread('HappyFish.jpg')
+img1 = cv2.imread('C:\coding\python\opencv\ch02\HappyFish.jpg')
 
 img2 = img1
-img3 = img1.copy()
+img3 = img1.copy() # 완전한 복사본 파일
 
 #img1.fill(255)
 

@@ -30,11 +30,12 @@ cv2.imshow('img2', img2)
 cv2.waitKey()
 
 # 영상의 픽셀 값 참조
+'''
 for y in range(h):
     for x in range(w):
         img1[y, x] = 255
         img2[y, x] = (0, 0, 255)        
-
+'''
 # img1[:,:] = 255
 # img2[:,:] = (0, 0, 255)
 
