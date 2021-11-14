@@ -13,7 +13,7 @@ if img is None:
     sys.exit()
 
 # 이미지 저장
-# cv2.imwrite('cat_gray.png',img)
+cv2.imwrite('cat_gray.png',img)
 
 # 이미지를 받아오는 창 생성 -> default 값으로 창 사이즈에 맞는 크기로 이미지 설정
 cv2.namedWindow('image')
