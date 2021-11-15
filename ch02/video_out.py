@@ -10,8 +10,9 @@ if not cap.isOpened():
 
 w = round(cap.get(cv2.CAP_PROP_FRAME_WIDTH))
 h = round(cap.get(cv2.CAP_PROP_FRAME_HEIGHT))
-fps = cap.get(cv2.CAP_PROP_FPS)
+fps = cap.get(cv2.CAP_PROP_FPS) # 보통 초당 30 프레임
 
+# 4문자 코드 four character code. 동영상 파일의 코덱, 압축 방식, 색상, 픽셀 포맷 등을 정의하는 정수 값
 fourcc = cv2.VideoWriter_fourcc(*'DIVX') # *'DIVX' == 'D', 'I', 'V', 'X'
 delay = round(1000 / fps)
 
@@ -28,12 +29,16 @@ while True:
     if not ret:
         break
 
-    inversed = ~frame
+    # inversed = ~frame
+    
+    # edge 영상 저장하고 싶을 경우
+    # edge = cv2.Canny(frame,50,150)
+    # edge_color = cv2.cvtColor(edge,cv2.COLOR_GRAY2BGR)
 
-    out.write(inversed)
+    # out.write(inversed)
 
     cv2.imshow('frame', frame)
-    cv2.imshow('inversed', inversed)
+    # cv2.imshow('inversed', inversed)
 
     if cv2.waitKey(delay) == 27:
         break

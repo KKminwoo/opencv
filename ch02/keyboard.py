@@ -3,7 +3,7 @@ import numpy as np
 import cv2
 
 
-img = cv2.imread('cat.bmp', cv2.IMREAD_GRAYSCALE)
+img = cv2.imread('C:\coding\python\opencv\ch02\cat.bmp', cv2.IMREAD_GRAYSCALE)
 
 if img is None:
     print('Image load failed!')
