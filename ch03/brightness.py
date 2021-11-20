@@ -10,6 +10,7 @@ if src is None:
     print('Image load failed!')
     sys.exit()
 
+# 밝기 조절 연산
 dst = cv2.add(src, 100)
 #dst = np.clip(src + 100., 0, 255).astype(np.uint8)
 
