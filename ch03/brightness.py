@@ -4,13 +4,13 @@ import cv2
 
 
 # 그레이스케일 영상 불러오기
-src = cv2.imread('lenna.bmp', cv2.IMREAD_GRAYSCALE)
+src = cv2.imread('C:\coding\python\opencv\ch03\lenna.bmp', cv2.IMREAD_GRAYSCALE)
 
 if src is None:
     print('Image load failed!')
     sys.exit()
 
-# 밝기 조절 연산
+# 밝기 조절 더하기 연산
 dst = cv2.add(src, 100)
 #dst = np.clip(src + 100., 0, 255).astype(np.uint8)
 
