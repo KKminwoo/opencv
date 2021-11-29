@@ -3,13 +3,15 @@ import numpy as np
 import cv2
 
 
-src = cv2.imread('lenna.bmp', cv2.IMREAD_GRAYSCALE)
+src = cv2.imread('C:\coding\python\opencv\ch03\lenna.bmp', cv2.IMREAD_GRAYSCALE)
 
 if src is None:
     print('Image load failed!')
     sys.exit()
 
-alpha = 1.0
+alpha = 1
+
+# 명합을 조절하는 함수가 없기 때문에 위 수식에서 알파로 선명도를 조절한다.
 dst = np.clip((1+alpha)*src - 128*alpha, 0, 255).astype(np.uint8)
 
 cv2.imshow('src', src)
