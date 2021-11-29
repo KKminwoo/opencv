@@ -5,7 +5,7 @@ import cv2
 
 # 입력 영상에서 ROI를 지정하고, 히스토그램 계산
 
-src = cv2.imread('cropland.png')
+src = cv2.imread('C:\coding\python\opencv\ch03\cropland.png')
 
 if src is None:
     print('Image load failed!')
