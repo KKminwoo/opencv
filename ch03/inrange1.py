@@ -3,7 +3,7 @@ import numpy as np
 import cv2
 
 
-src = cv2.imread('candies.png')
+src = cv2.imread('C:\coding\python\opencv\ch03\candies.png')
 #src = cv2.imread('candies2.png')
 
 if src is None:
@@ -12,7 +12,9 @@ if src is None:
 
 src_hsv = cv2.cvtColor(src, cv2.COLOR_BGR2HSV)
 
+# rgb 기준으로 녹색 영역 추출하기
 dst1 = cv2.inRange(src, (0, 128, 0), (100, 255, 100))
+# hsv 기준으로 녹색 영역 추출하기
 dst2 = cv2.inRange(src_hsv, (50, 150, 0), (80, 255, 255))
 
 cv2.imshow('src', src)
