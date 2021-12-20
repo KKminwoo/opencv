@@ -41,8 +41,10 @@ while True:
         break
 
     if cam_mode == 1:
+        # 입력 영상의 색상을 단순화시키고, 에지 부분을 검정색으로 강조
         frame = cartoon_filter(frame)
     elif cam_mode == 2:
+        # 평탄한 영역은 흰색, 에지 근방에서 어두운 영역을 검정 색으로 설정
         frame = pencil_sketch(frame)
         frame = cv2.cvtColor(frame, cv2.COLOR_GRAY2BGR)
 
