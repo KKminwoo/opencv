@@ -8,6 +8,8 @@ if src is None:
     print('Image load failed!')
     sys.exit()
 
+# 미디언 필터
+# 주변 픽셀들의 값들을 정렬하여 그 중앙값으로 픽셀 값을 대체
 dst = cv2.medianBlur(src, 3)
 
 cv2.imshow('src', src)
