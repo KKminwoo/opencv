@@ -3,7 +3,7 @@ import numpy as np
 import cv2
 
 
-src = cv2.imread('namecard.jpg')
+src = cv2.imread(r'C:\coding\python\opencv\ch05\namecard.jpg')
 
 if src is None:
     print('Image load failed!')
