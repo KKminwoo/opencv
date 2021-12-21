@@ -3,7 +3,7 @@ import numpy as np
 import cv2
 
 
-src = cv2.imread('cat.bmp')
+src = cv2.imread(r'C:\coding\python\opencv\ch05\cat.bmp')
 
 if src is None:
     print('Image load failed!')
@@ -20,6 +20,9 @@ cv2.waitKey()
 
 # 피라미드 영상에 그리기
 for i in range(1, 4):
+    # 이미지 피라미드 다운샘플링
+    # 하나의 영상에 대해 다양한 해상도의 영상 세트를 구성한 것
+    # 보통 가우시안 블러링 & 다운샘플링 형태로 축소하여 구성
     src = cv2.pyrDown(src)
     cpy = src.copy()
     cv2.rectangle(cpy, rc, (0, 0, 255), 2, shift=i)
