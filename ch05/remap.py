@@ -3,7 +3,7 @@ import numpy as np
 import cv2
 
 
-src = cv2.imread('tekapo.bmp')
+src = cv2.imread(r'C:\coding\python\opencv\ch05\tekapo.bmp')
 
 if src is None:
     print('Image load failed!')
@@ -14,6 +14,8 @@ h, w = src.shape[:2]
 map2, map1 = np.indices((h, w), dtype=np.float32)
 map2 = map2 + 10 * np.sin(map1 / 32)
 
+# 리매핑 : 영상의 특정 위치 픽셀을 다른 위치에 재배치하는 일반적인 프로세스
+# 어파인 변환, 투시 변환을 포함한 다양한 변환을 리매핑으로 표현 가능
 dst = cv2.remap(src, map1, map2, cv2.INTER_CUBIC, borderMode=cv2.BORDER_DEFAULT)
 
 cv2.imshow('src', src)
