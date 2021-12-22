@@ -51,7 +51,7 @@ def onMouse(event, x, y, flags, param):
 
 
 # 입력 이미지 불러오기
-src = cv2.imread('scanned.jpg')
+src = cv2.imread(r'C:\coding\python\opencv\ch05\scanned.jpg')
 
 if src is None:
     print('Image open failed!')
