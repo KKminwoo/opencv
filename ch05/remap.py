@@ -11,6 +11,7 @@ if src is None:
 
 h, w = src.shape[:2]
 
+# 삼각함수를 이용한 리매핑
 map2, map1 = np.indices((h, w), dtype=np.float32)
 map2 = map2 + 10 * np.sin(map1 / 32)
 
