@@ -2,9 +2,11 @@ import sys
 import numpy as np
 import cv2
 
+# 동전 검출 -> 허프 원 검출
+# 동전 구분 -> 색상 정보 이용
 
 # 입력 이미지 불러오기
-src = cv2.imread('coins1.jpg')
+src = cv2.imread(r'C:\coding\python\opencv\ch06\coins1.jpg')
 
 if src is None:
     print('Image open failed!')
