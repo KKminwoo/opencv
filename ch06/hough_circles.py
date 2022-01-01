@@ -4,7 +4,7 @@ import cv2
 
 
 # 입력 이미지 불러오기
-src = cv2.imread('dial.jpg')
+src = cv2.imread(r'C:\coding\python\opencv\ch06\dial.jpg')
 
 if src is None:
     print('Image open failed!')
@@ -19,6 +19,7 @@ def on_trackbar(pos):
     rmax = cv2.getTrackbarPos('maxRadius', 'img')
     th = cv2.getTrackbarPos('threshold', 'img')
 
+    # 허프 변환을 응용하여 원 검출
     circles = cv2.HoughCircles(blr, cv2.HOUGH_GRADIENT, 1, 50,
                                param1=120, param2=th, minRadius=rmin, maxRadius=rmax)
 

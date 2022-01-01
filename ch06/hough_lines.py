@@ -3,7 +3,7 @@ import numpy as np
 import cv2
 
 
-src = cv2.imread('building.jpg', cv2.IMREAD_GRAYSCALE)
+src = cv2.imread(r'C:\coding\python\opencv\ch06\building.jpg', cv2.IMREAD_GRAYSCALE)
 
 if src is None:
     print('Image load failed!')
@@ -11,8 +11,11 @@ if src is None:
 
 edges = cv2.Canny(src, 50, 150)
 
+# 허프 변환 직선 검출 : 2차원 영상 좌표에서 직선의 방정식을 파라미터 공간으로 변환하여 직선을 찾는 알고리즘
+# 확률적 허프 변환에 의한 선분 검출
 lines = cv2.HoughLinesP(edges, 1, np.pi / 180., 160,
                         minLineLength=50, maxLineGap=5)
+
 
 dst = cv2.cvtColor(edges, cv2.COLOR_GRAY2BGR)
 
